@@ -1,2 +1,2 @@
 # neos-gmaps
-A Neos CMS package to add Google Map as node
+A Neos CMS package to add Google Maps as node
