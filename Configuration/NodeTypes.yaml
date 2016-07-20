@@ -1,0 +1,4 @@
+'TYPO3.Neos:ContentCollection':
+  constraints:
+    nodeTypes:
+      'ObisConcept.NeosGmaps:GoogleMapMarker': FALSE

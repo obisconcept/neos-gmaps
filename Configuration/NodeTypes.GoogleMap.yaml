@@ -11,6 +11,8 @@
       groups:
         'properties':
           label: i18n
+          position: 10
+  properties:
     height:
       type: integer
       defaultValue: 300
@@ -43,8 +45,10 @@
       groups:
         'properties':
           label: i18n
+          position: 10
         'info':
           label: i18n
+          position: 20
   properties:
     street:
       type: string
