@@ -1,0 +1,10 @@
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+        'ObisConcept.NeosGmaps': TRUE
+        
+    userInterface:
+      translation:
+        autoInclude:
+          'ObisConcept.NeosGmaps': ['NodeTypes/*']

@@ -1,0 +1,91 @@
+'ObisConcept.NeosGmaps:GoogleMap':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  childNodes:
+    markerCollection:
+      type: 'ObisConcept.NeosGmaps:MarkerCollection'
+  ui:
+    label: i18n
+    icon: 'fa fa-globe'
+    inspector:
+      groups:
+        'properties':
+          label: i18n
+    height:
+      type: integer
+      defaultValue: 300
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+      validation:
+        'TYPO3.Neos/Validation/IntegerValidator':
+
+'ObisConcept.NeosGmaps:MarkerCollection':
+  superTypes:
+    'TYPO3.Neos:ContentCollection': TRUE
+  childNodes:
+    markerOne:
+      type: 'ObisConcept.NeosGmaps:GoogleMapMarker'
+  constraints:
+    nodeTypes:
+      'ObisConcept.NeosGmaps:GoogleMapMarker': TRUE
+      '*': FALSE
+
+'ObisConcept.NeosGmaps:GoogleMapMarker':
+  superTypes:
+    'TYPO3.Neos:Content': TRUE
+  ui:
+    label: i18n
+    icon: 'fa fa-map-marker'
+    inspector:
+      groups:
+        'properties':
+          label: i18n
+        'info':
+          label: i18n
+  properties:
+    street:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+    zip:
+      type: integer
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+    city:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+    country:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+    title:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'info'
+    text:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'info'
+          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'

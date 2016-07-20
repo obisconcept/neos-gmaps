@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="ObisConcept.NeosGMapsPlugin" source-language="en" datatype="plaintext" target-language="de">
+		<body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Google Map</source>
+                <target xml:lang="de" state="translated">Google Map</target>
+            </trans-unit>
+            <trans-unit id="groups.properties" xml:space="preserve">
+                <source>Properties</source>
+                <target xml:lang="de" state="translated">Eigenschaften</target>
+            </trans-unit>
+            <trans-unit id="properties.height" xml:space="preserve">
+                <source>Height in pixels</source>
+                <target xml:lang="de" state="translated">Höhe in Pixeln</target>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

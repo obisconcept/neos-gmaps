@@ -1,0 +1,40 @@
+prototype(TYPO3.Neos:Page) {
+
+    head {
+
+        gmapsApiJs = TYPO3.TypoScript:Tag {
+            @position = 'before javascripts'
+            tagName = 'script'
+            attributes {
+                type = 'text/javascript'
+                src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCRl_zHBMgffWGCK06upoVEmqnTWdX-uvA'
+            }
+        }
+
+        gmapsJs = TYPO3.TypoScript:Tag {
+            @position = 'after gmapsApiJs'
+            tagName = 'script'
+            attributes {
+                id = 'bootstrap-js'
+                type = 'text/javascript'
+                src = TYPO3.TypoScript:ResourceUri {
+                    path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/main.min.js'
+                }
+            }
+        }
+
+        gmapsBackendJs = TYPO3.TypoScript:Tag {
+            @position = 'after javascripts'
+            tagName = 'script'
+            attributes {
+                type = 'text/javascript'
+                src = TYPO3.TypoScript:ResourceUri {
+                    path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/backend.min.js'
+                }
+            }
+            @if.onlyRenderWhenNotInLiveWorkspace = ${node.context.workspace.name != 'live'}
+        }
+
+    }
+
+}
