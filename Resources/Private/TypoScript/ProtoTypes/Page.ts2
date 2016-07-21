@@ -12,7 +12,7 @@ prototype(TYPO3.Neos:Page) {
         }
 
         gmapsJs = TYPO3.TypoScript:Tag {
-            @position = 'after gmapsApiJs'
+            @position = 'after javascripts'
             tagName = 'script'
             attributes {
                 id = 'bootstrap-js'
