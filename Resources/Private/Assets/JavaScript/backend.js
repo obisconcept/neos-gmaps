@@ -5,5 +5,15 @@ if (typeof document.addEventListener === 'function') {
         initGoogleMaps();
         
     });
+    
+    document.addEventListener('Neos.NodeCreated', function(event) {
+        
+        if ($(event.detail.element).find('.google-map-canvas')) {
+            
+            initGoogleMaps();
+            
+        }
+        
+    });
 
 }

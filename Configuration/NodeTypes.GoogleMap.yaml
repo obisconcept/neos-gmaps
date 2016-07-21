@@ -12,6 +12,10 @@
         'properties':
           label: i18n
           position: 10
+        'coordinates':
+          label: i18n
+          position: 10
+          collapsed: TRUE
   properties:
     height:
       type: integer
@@ -23,13 +27,78 @@
           group: 'properties'
       validation:
         'TYPO3.Neos/Validation/IntegerValidator':
-
+    lat:
+      type: string
+      defaultValue: '51.163375'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'coordinates'
+    lng:
+      type: string
+      defaultValue: '10.447683'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'coordinates'
+    zoom:
+      type: string
+      defaultValue: '5'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'coordinates'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: FALSE
+            values:
+              '1':
+                label: '1'
+              '2':
+                label: '2'
+              '3':
+                label: '3'
+              '4':
+                label: '4'
+              '5':
+                label: '5'
+              '6':
+                label: '6'
+              '7':
+                label: '7'
+              '8':
+                label: '8'
+              '9':
+                label: '9'
+              '10':
+                label: '10'
+              '11':
+                label: '11'
+              '12':
+                label: '12'
+              '13':
+                label: '13'
+              '14':
+                label: '14'
+              '15':
+                label: '15'
+              '16':
+                label: '16'
+              '17':
+                label: '17'
+              '18':
+                label: '18'
+              '19':
+                label: '19'
+              '20':
+                label: '20'
+          
 'ObisConcept.NeosGmaps:MarkerCollection':
   superTypes:
     'TYPO3.Neos:ContentCollection': TRUE
-  childNodes:
-    markerOne:
-      type: 'ObisConcept.NeosGmaps:GoogleMapMarker'
   constraints:
     nodeTypes:
       'ObisConcept.NeosGmaps:GoogleMapMarker': TRUE
@@ -43,7 +112,7 @@
     icon: 'fa fa-map-marker'
     inspector:
       groups:
-        'properties':
+        'address':
           label: i18n
           position: 10
         'info':
@@ -56,28 +125,28 @@
         label: i18n
         reloadIfChanged: TRUE
         inspector:
-          group: 'properties'
+          group: 'address'
     zip:
-      type: integer
+      type: string
       ui:
         label: i18n
         reloadIfChanged: TRUE
         inspector:
-          group: 'properties'
+          group: 'address'
     city:
       type: string
       ui:
         label: i18n
         reloadIfChanged: TRUE
         inspector:
-          group: 'properties'
+          group: 'address'
     country:
       type: string
       ui:
         label: i18n
         reloadIfChanged: TRUE
         inspector:
-          group: 'properties'
+          group: 'address'
     title:
       type: string
       ui:

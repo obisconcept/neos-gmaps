@@ -5,8 +5,8 @@
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Marker</source>
             </trans-unit>
-            <trans-unit id="groups.properties" xml:space="preserve">
-                <source>Properties</source>
+            <trans-unit id="groups.address" xml:space="preserve">
+                <source>Address</source>
             </trans-unit>
             <trans-unit id="groups.info" xml:space="preserve">
                 <source>Info window</source>

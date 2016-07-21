@@ -10,9 +10,25 @@
                 <source>Properties</source>
                 <target xml:lang="de" state="translated">Eigenschaften</target>
             </trans-unit>
+            <trans-unit id="groups.coordinates" xml:space="preserve">
+                <source>Coordinates (ignored when marker set)</source>
+                <target xml:lang="de" state="translated">Koordinaten (ignoriert, wenn Marker gesetzt)</target>
+            </trans-unit>
             <trans-unit id="properties.height" xml:space="preserve">
                 <source>Height in pixels</source>
                 <target xml:lang="de" state="translated">Höhe in Pixeln</target>
+            </trans-unit>
+            <trans-unit id="properties.lat" xml:space="preserve">
+                <source>Latitude</source>
+                <target xml:lang="de" state="translated">Breitengrad</target>
+            </trans-unit>
+            <trans-unit id="properties.lng" xml:space="preserve">
+                <source>Longitude</source>
+                <target xml:lang="de" state="translated">Längengrad</target>
+            </trans-unit>
+            <trans-unit id="properties.zoom" xml:space="preserve">
+                <source>Zoom</source>
+                <target xml:lang="de" state="translated">Zoom</target>
             </trans-unit>
 		</body>
 	</file>

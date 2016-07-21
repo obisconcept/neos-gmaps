@@ -89,6 +89,13 @@ window.initGoogleMaps = function() {
             }
             
         });
+        
+        if (markers.markers.length === 0) {
+            
+            map.setCenter({lat: $(this).data('lat'), lng: $(this).data('lng')});
+            map.setZoom($(this).data('zoom'));
+            
+        }
                 
     });
     

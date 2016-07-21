@@ -6,9 +6,9 @@
                 <source>Marker</source>
                 <target xml:lang="de" state="translated">Markierung</target>
             </trans-unit>
-            <trans-unit id="groups.properties" xml:space="preserve">
-                <source>Properties</source>
-                <target xml:lang="de" state="translated">Eigenschaften</target>
+            <trans-unit id="groups.address" xml:space="preserve">
+                <source>Address</source>
+                <target xml:lang="de" state="translated">Adresse</target>
             </trans-unit>
             <trans-unit id="groups.info" xml:space="preserve">
                 <source>Info window</source>
