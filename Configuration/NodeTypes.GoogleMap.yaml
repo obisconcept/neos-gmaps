@@ -13,9 +13,11 @@
         'properties':
           label: i18n
           position: 10
+          icon: 'fa fa-cog'
         'coordinates':
           label: i18n
           position: 10
+          icon: 'fa fa-location-arrow'
   properties:
     height:
       type: integer
@@ -182,9 +184,11 @@
         'address':
           label: i18n
           position: 10
+          icon: 'fa fa-map-marker'
         'info':
           label: i18n
           position: 20
+          icon: 'fa fa-info'
   properties:
     street:
       type: string
