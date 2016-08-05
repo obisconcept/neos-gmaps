@@ -16,7 +16,13 @@ window.initGoogleMaps = function() {
         
         var map = new google.maps.Map($(this).get(0), {
             center: {lat: 0, lng: 0},
-            zoom: 10
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId[$(this).data('type')],
+            draggable: $(this).data('draggable'),
+            scrollwheel: $(this).data('scrollwheel'),
+            mapTypeControl: $(this).data('map-type-control'),
+            zoomControl: $(this).data('zoom-control'),
+            streetViewControl: $(this).data('street-view-control')
         });
         
         var infowindow = new google.maps.InfoWindow({
@@ -65,8 +71,12 @@ window.initGoogleMaps = function() {
                             
                         }
                         
+                    }
+                    
+                    if ($('.google-map-canvas[data-map-id='+id+']').data('fit-bounds') == 1) {
+            
                         var bounds = new google.maps.LatLngBounds();
-                
+                        
                         for (var i = 0; i < mapMarkers.length; i++) {
                             
                             bounds.extend(mapMarkers[i].getPosition());
@@ -90,7 +100,7 @@ window.initGoogleMaps = function() {
             
         });
         
-        if (markers.markers.length === 0) {
+        if ($(this).data('fit-bounds') == 0) {
             
             map.setCenter({lat: $(this).data('lat'), lng: $(this).data('lng')});
             map.setZoom($(this).data('zoom'));

@@ -7,15 +7,17 @@
   ui:
     label: i18n
     icon: 'fa fa-globe'
+    inlineEditable: TRUE
     inspector:
       groups:
         'properties':
           label: i18n
           position: 10
+          icon: 'fa fa-cog'
         'coordinates':
           label: i18n
           position: 10
-          collapsed: TRUE
+          icon: 'fa fa-location-arrow'
   properties:
     height:
       type: integer
@@ -27,6 +29,65 @@
           group: 'properties'
       validation:
         'TYPO3.Neos/Validation/IntegerValidator':
+    type:
+      type: string
+      defaultValue: 'ROADMAP'
+      ui:
+        label: 'Type'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              ROADMAP:
+                label: i18n
+              SATELLITE:
+                label: i18n
+              HYBRID:
+                label: i18n
+              TERRAIN:
+                label: i18n
+    draggable:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+    scrollwheel:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+    mapTypeControl:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+    zoomControl:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
+    streetViewControl:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'properties'
     lat:
       type: string
       defaultValue: '51.163375'
@@ -95,6 +156,14 @@
                 label: '19'
               '20':
                 label: '20'
+    fitBounds:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'coordinates'
           
 'ObisConcept.NeosGmaps:MarkerCollection':
   superTypes:
@@ -115,9 +184,11 @@
         'address':
           label: i18n
           position: 10
+          icon: 'fa fa-map-marker'
         'info':
           label: i18n
           position: 20
+          icon: 'fa fa-info'
   properties:
     street:
       type: string

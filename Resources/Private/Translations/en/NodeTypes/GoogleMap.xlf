@@ -12,10 +12,40 @@
                 <source>Height in pixels</source>
             </trans-unit>
             <trans-unit id="groups.coordinates" xml:space="preserve">
-                <source>Coordinates (ignored when marker set)</source>
+                <source>Coordinates</source>
             </trans-unit>
             <trans-unit id="properties.height" xml:space="preserve">
                 <source>Height in pixels</source>
+            </trans-unit>
+            <trans-unit id="properties.type" xml:space="preserve">
+                <source>Map type</source>
+            </trans-unit>
+            <trans-unit id="properties.type.selectBoxEditor.values.ROADMAP" xml:space="preserve">
+                <source>Roadmap</source>
+            </trans-unit>
+            <trans-unit id="properties.type.selectBoxEditor.values.SATELLITE" xml:space="preserve">
+                <source>Satellite</source>
+            </trans-unit>
+            <trans-unit id="properties.type.selectBoxEditor.values.HYBRID" xml:space="preserve">
+                <source>Hybrid</source>
+            </trans-unit>
+            <trans-unit id="properties.type.selectBoxEditor.values.TERRAIN" xml:space="preserve">
+                <source>Terrain</source>
+            </trans-unit>
+            <trans-unit id="properties.draggable" xml:space="preserve">
+                <source>Draggable</source>
+            </trans-unit>
+            <trans-unit id="properties.scrollwheel" xml:space="preserve">
+                <source>Scrollwheel zooming</source>
+            </trans-unit>
+            <trans-unit id="properties.mapTypeControl" xml:space="preserve">
+                <source>Map type control</source>
+            </trans-unit>
+            <trans-unit id="properties.zoomControl" xml:space="preserve">
+                <source>Zoom control</source>
+            </trans-unit>
+            <trans-unit id="properties.streetViewControl" xml:space="preserve">
+                <source>StreetView control</source>
             </trans-unit>
             <trans-unit id="properties.lat" xml:space="preserve">
                 <source>Latitude</source>
@@ -25,6 +55,9 @@
             </trans-unit>
             <trans-unit id="properties.zoom" xml:space="preserve">
                 <source>Zoom</source>
+            </trans-unit>
+            <trans-unit id="properties.fitBounds" xml:space="preserve">
+                <source>Fit to markers (ignores options above)</source>
             </trans-unit>
 		</body>
 	</file>

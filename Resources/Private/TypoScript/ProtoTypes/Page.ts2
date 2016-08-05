@@ -7,12 +7,12 @@ prototype(TYPO3.Neos:Page) {
             tagName = 'script'
             attributes {
                 type = 'text/javascript'
-                src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCRl_zHBMgffWGCK06upoVEmqnTWdX-uvA'
+                src = ${'https://maps.googleapis.com/maps/api/js?key='+Configuration.settings('ObisConcept.NeosGmaps.apiKey')}
             }
         }
 
         gmapsJs = TYPO3.TypoScript:Tag {
-            @position = 'after gmapsApiJs'
+            @position = 'after javascripts'
             tagName = 'script'
             attributes {
                 id = 'bootstrap-js'
