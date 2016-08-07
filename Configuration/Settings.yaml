@@ -8,3 +8,7 @@ TYPO3:
       translation:
         autoInclude:
           'ObisConcept.NeosGmaps': ['NodeTypes/*']
+
+ObisConcept:
+  NeosGmaps:
+    apiKey: ''
