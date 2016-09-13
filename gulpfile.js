@@ -13,7 +13,7 @@ var gulp  = require('gulp'),
 gulp.task('build-js', function() {
 
     gutil.log('Generate js files ...');
-    
+
     var onError = function(err) {
         notify.onError({
             title:    'Gulp',
@@ -23,11 +23,12 @@ gulp.task('build-js', function() {
         })(err);
         this.emit('end');
     };
-    
+
     // Website js files
     gulp.src([
-            'Resources/Private/Assets/JavaScript/**',
-            '!' + 'Resources/Private/Assets/JavaScript/backend.js'
+            'Resources/Private/Assets/JavaScript/**/!(main)*.js',
+            '!' + 'Resources/Private/Assets/JavaScript/backend.js',
+            'Resources/Private/Assets/JavaScript/main.js'
         ])
         .pipe(plumber({errorHandler: onError}))
         .pipe(sourcemaps.init())

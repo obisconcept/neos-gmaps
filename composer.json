@@ -14,8 +14,8 @@
     "description": "A Neos CMS package with a Google Maps node type",
     "license": ["MIT"],
     "require": {
-        "typo3/neos": "~2.2.0",
-        "typo3/neos-nodetypes": "~2.2.0"
+        "typo3/neos": "~2.3.0",
+        "typo3/neos-nodetypes": "~2.3.0"
     },
     "autoload": {
         "psr-0": {
