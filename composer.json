@@ -17,6 +17,9 @@
         "typo3/neos": "~2.3.0",
         "typo3/neos-nodetypes": "~2.3.0"
     },
+    "suggest": {
+        "obisconcept/neos-bootstrap": "Provides jQuery which is required by the plugin"
+    },
     "autoload": {
         "psr-0": {
             "ObisConcept\\NeosGmaps": "Classes"

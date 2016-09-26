@@ -10,8 +10,10 @@ Add the package in your site package composer.json
 }
 ```
 
-## Usage
+## Requirements
+The package requires jQuery which is not provided within.
 
+## Usage
 Add your API key to the `Settings.yaml` of your site package
 
 ```
