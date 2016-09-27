@@ -18,7 +18,8 @@
         "typo3/neos-nodetypes": "~2.3.0"
     },
     "suggest": {
-        "obisconcept/neos-bootstrap": "Provides jQuery which is required by the plugin"
+        "obisconcept/neos-bootstrap": "Provides jQuery which is required by the plugin",
+        "obisconcept/neos-jquery": "Add this package, if you don't use obisconcept/neos-bootstrap package or if you don't inluded jQuery by yourself"
     },
     "autoload": {
         "psr-0": {
