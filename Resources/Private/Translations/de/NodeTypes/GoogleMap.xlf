@@ -74,6 +74,10 @@
                 <source>Fit to markers (ignores options above)</source>
                 <target xml:lang="de" state="translated">An Markern ausrichten (ignoriert vorherige Angaben)</target>
             </trans-unit>
+            <trans-unit id="properties.tilt" xml:space="preserve">
+                <source>Tilt</source>
+                <target xml:lang="de" state="translated">Neigung</target>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>
