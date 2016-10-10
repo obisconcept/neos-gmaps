@@ -24,7 +24,6 @@ window.initGoogleMaps = function() {
             zoomControl: $(this).data('zoom-control'),
             streetViewControl: $(this).data('street-view-control')
         });
-        map.setTilt($(this).data('tilt'));
         
         var infowindow = new google.maps.InfoWindow({
             maxWidth: 250
@@ -106,6 +105,12 @@ window.initGoogleMaps = function() {
             map.setCenter({lat: $(this).data('lat'), lng: $(this).data('lng')});
             map.setZoom($(this).data('zoom'));
             
+        }
+
+        if (map.getTilt()) {
+
+            map.setTilt($(this).data('tilt'));
+
         }
                 
     });
