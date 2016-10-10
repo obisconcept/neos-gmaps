@@ -24,6 +24,7 @@ window.initGoogleMaps = function() {
             zoomControl: $(this).data('zoom-control'),
             streetViewControl: $(this).data('street-view-control')
         });
+        map.setTilt($(this).data('tilt'));
         
         var infowindow = new google.maps.InfoWindow({
             maxWidth: 250

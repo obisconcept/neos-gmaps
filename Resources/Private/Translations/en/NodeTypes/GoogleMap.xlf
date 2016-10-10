@@ -59,6 +59,9 @@
             <trans-unit id="properties.fitBounds" xml:space="preserve">
                 <source>Fit to markers (ignores options above)</source>
             </trans-unit>
+            <trans-unit id="properties.tilt" xml:space="preserve">
+                <source>Tilt</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>
