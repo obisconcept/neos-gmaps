@@ -1,6 +1,6 @@
 {
     "name": "obisconcept/neos-gmaps",
-    "type": "typo3-flow-plugin",
+    "type": "neos-flow-plugin",
     "authors": [
         {
             "name": "obis|CONCEPT GmbH & Co. KG",
@@ -11,18 +11,18 @@
     "support": {
         "email": "dev@obis-concept.de"
     },
-    "description": "A Neos CMS package with a Google Maps node type",
+    "description": "A Neos CMS package with a Google Maps node type for NEOS 3.0.0",
     "license": ["MIT"],
     "require": {
-        "typo3/neos": "~2.3.0",
-        "typo3/neos-nodetypes": "~2.3.0"
+        "neos/neos": "~3.0.0",
+        "neos/nodetypes": "~3.0.0",
     },
     "suggest": {
         "obisconcept/neos-jquery": "Provides jQuery which is required by the plugin, add it if you don't inluded jQuery by yourself"
     },
     "autoload": {
-        "psr-0": {
-            "ObisConcept\\NeosGmaps": "Classes"
+        "psr-4": {
+            "ObisConcept\\NeosGmaps\\": "Classes"
         }
     }
 }
