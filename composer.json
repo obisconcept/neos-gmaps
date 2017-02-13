@@ -12,7 +12,9 @@
         "email": "dev@obis-concept.de"
     },
     "description": "A Neos CMS package with a Google Maps node type for NEOS 3.0.0",
-    "license": ["MIT"],
+    "license": [
+        "MIT"
+    ],
     "require": {
         "neos/neos": "~3.0.0",
         "neos/nodetypes": "~3.0.0"
@@ -24,5 +26,10 @@
         "psr-4": {
             "ObisConcept\\NeosGmaps\\": "Classes"
         }
+    },
+    "extra": {
+        "applied-flow-migrations": [
+            "TYPO3.FLOW3-201201261636"
+        ]
     }
 }
