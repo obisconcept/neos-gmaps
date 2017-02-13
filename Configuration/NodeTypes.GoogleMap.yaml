@@ -1,20 +1,21 @@
+
 'ObisConcept.NeosGmaps:GoogleMap':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   childNodes:
     markerCollection:
       type: 'ObisConcept.NeosGmaps:MarkerCollection'
   ui:
     label: i18n
     icon: 'fa fa-globe'
-    inlineEditable: TRUE
+    inlineEditable: true
     inspector:
       groups:
-        'properties':
+        properties:
           label: i18n
           position: 10
           icon: 'fa fa-cog'
-        'coordinates':
+        coordinates:
           label: i18n
           position: 10
           icon: 'fa fa-location-arrow'
@@ -24,20 +25,20 @@
       defaultValue: 300
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'properties'
+          group: properties
       validation:
-        'TYPO3.Neos/Validation/IntegerValidator':
+        Neos.Neos/Validation/IntegerValidator: null
     type:
       type: string
-      defaultValue: 'ROADMAP'
+      defaultValue: ROADMAP
       ui:
-        label: 'Type'
-        reloadIfChanged: TRUE
+        label: Type
+        reloadIfChanged: true
         inspector:
-          group: 'properties'
-          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          group: properties
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
             values:
               ROADMAP:
@@ -50,158 +51,156 @@
                 label: i18n
     draggable:
       type: boolean
-      defaultValue: TRUE
+      defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'properties'
+          group: properties
     scrollwheel:
       type: boolean
-      defaultValue: TRUE
+      defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'properties'
+          group: properties
     mapTypeControl:
       type: boolean
-      defaultValue: TRUE
+      defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'properties'
+          group: properties
     zoomControl:
       type: boolean
-      defaultValue: TRUE
+      defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'properties'
+          group: properties
     streetViewControl:
       type: boolean
-      defaultValue: TRUE
+      defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'properties'
+          group: properties
     lat:
       type: string
       defaultValue: '51.163375'
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'coordinates'
+          group: coordinates
     lng:
       type: string
       defaultValue: '10.447683'
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'coordinates'
+          group: coordinates
     zoom:
       type: string
       defaultValue: '5'
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'coordinates'
-          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          group: coordinates
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
-            allowEmpty: FALSE
+            allowEmpty: false
             values:
-              '1':
+              1:
                 label: '1'
-              '2':
+              2:
                 label: '2'
-              '3':
+              3:
                 label: '3'
-              '4':
+              4:
                 label: '4'
-              '5':
+              5:
                 label: '5'
-              '6':
+              6:
                 label: '6'
-              '7':
+              7:
                 label: '7'
-              '8':
+              8:
                 label: '8'
-              '9':
+              9:
                 label: '9'
-              '10':
+              10:
                 label: '10'
-              '11':
+              11:
                 label: '11'
-              '12':
+              12:
                 label: '12'
-              '13':
+              13:
                 label: '13'
-              '14':
+              14:
                 label: '14'
-              '15':
+              15:
                 label: '15'
-              '16':
+              16:
                 label: '16'
-              '17':
+              17:
                 label: '17'
-              '18':
+              18:
                 label: '18'
-              '19':
+              19:
                 label: '19'
-              '20':
+              20:
                 label: '20'
     fitBounds:
       type: boolean
-      defaultValue: FALSE
+      defaultValue: false
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'coordinates'
+          group: coordinates
     tilt:
       type: string
       defaultValue: '0'
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'coordinates'
-          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          group: coordinates
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
-            allowEmpty: FALSE
+            allowEmpty: false
             values:
-              '0':
+              0:
                 label: '0'
-              '45':
+              45:
                 label: '45'
-          
 'ObisConcept.NeosGmaps:MarkerCollection':
   superTypes:
-    'TYPO3.Neos:ContentCollection': TRUE
+    'Neos.Neos:ContentCollection': true
   constraints:
     nodeTypes:
-      'ObisConcept.NeosGmaps:GoogleMapMarker': TRUE
-      '*': FALSE
-
+      'ObisConcept.NeosGmaps:GoogleMapMarker': true
+      '*': false
 'ObisConcept.NeosGmaps:GoogleMapMarker':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     label: i18n
     icon: 'fa fa-map-marker'
     inspector:
       groups:
-        'address':
+        address:
           label: i18n
           position: 10
           icon: 'fa fa-map-marker'
-        'info':
+        info:
           label: i18n
           position: 20
           icon: 'fa fa-info'
@@ -210,42 +209,42 @@
       type: string
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'address'
+          group: address
     zip:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'address'
+          group: address
     city:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'address'
+          group: address
     country:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'address'
+          group: address
     title:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'info'
+          group: info
     text:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'info'
-          editor: 'TYPO3.Neos/Inspector/Editors/TextAreaEditor'
+          group: info
+          editor: Neos.Neos/Inspector/Editors/TextAreaEditor
