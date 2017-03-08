@@ -1,6 +1,6 @@
 {
     "name": "obisconcept/neos-gmaps",
-    "type": "neos-flow-plugin",
+    "type": "neos-plugin",
     "authors": [
         {
             "name": "obis|CONCEPT GmbH & Co. KG",
