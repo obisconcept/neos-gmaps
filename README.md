@@ -1,5 +1,5 @@
 # neos-gmaps
-A Neos CMS package to add Google Maps as node for Neos 3.0
+A Neos CMS package to add Google Maps as node
 
 ## Installation
 Add the package in your site package composer.json

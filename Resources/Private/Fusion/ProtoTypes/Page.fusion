@@ -21,6 +21,7 @@ prototype(Neos.Neos:Page) {
                     path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/main.min.js'
                 }
             }
+            @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
         }
 
         gmapsBackendJs = Neos.Fusion:Tag {
@@ -33,6 +34,7 @@ prototype(Neos.Neos:Page) {
                 }
             }
             @if.onlyRenderWhenNotInLiveWorkspace = ${node.context.workspace.name != 'live'}
+            @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
         }
 
     }
