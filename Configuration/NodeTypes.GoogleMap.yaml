@@ -181,6 +181,7 @@
                 label: '0'
               45:
                 label: '45'
+
 'ObisConcept.NeosGmaps:MarkerCollection':
   superTypes:
     'Neos.Neos:ContentCollection': true
@@ -188,6 +189,7 @@
     nodeTypes:
       'ObisConcept.NeosGmaps:GoogleMapMarker': true
       '*': false
+
 'ObisConcept.NeosGmaps:GoogleMapMarker':
   superTypes:
     'Neos.Neos:Content': true
@@ -205,6 +207,18 @@
           position: 20
           icon: 'fa fa-info'
   properties:
+    lat:
+      type: string
+      defaultValue: '40.866667'
+      ui:
+        inspector:
+          group: ~
+    lng:
+      type: string
+      defaultValue: '34.566667'
+      ui:
+        inspector:
+          group: ~
     street:
       type: string
       ui:

@@ -17,14 +17,15 @@
     ],
     "require": {
         "neos/neos": "^3.0.0",
-        "neos/nodetypes": "^3.0.0"
+        "neos/nodetypes": "^3.0.0",
+        "php-curl-class/php-curl-class": "^8.3"
     },
     "suggest": {
         "obisconcept/neos-jquery": "Provides jQuery which is required by the plugin, add it if you don't inluded jQuery by yourself"
     },
     "autoload": {
         "psr-4": {
-            "ObisConcept\\NeosGmaps\\": "Classes"
+            "ObisConcept\\NeosGmaps\\": "Classes/"
         }
     },
     "extra": {
