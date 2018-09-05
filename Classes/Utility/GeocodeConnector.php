@@ -56,9 +56,9 @@ class GeocodeConnector
         $endpoint = self::GEOCODE_API_ENDPOINT;
 
         // Replace API key placeholder in endpoint URL
-        $endpoint = str_replace('{KEY}', $this->apiKey, self::GEOCODE_API_ENDPOINT);
+        $endpoint = str_replace('{KEY}', urlencode($this->apiKey), self::GEOCODE_API_ENDPOINT);
         // Replace adress placeholder in endpoint URL
-        $endpoint = str_replace('{VALUE}', $targetAddress, $endpoint);
+        $endpoint = str_replace('{VALUE}', urlencode($targetAddress), $endpoint);
 
         return $endpoint;
     }

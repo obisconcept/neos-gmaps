@@ -57,7 +57,7 @@ class UnitLoginAspect
 
         $modifiedProperty = $joinPoint->getMethodArgument('propertyName');
 
-        // Check if one of the relevant properties has been changed
+        // Check if one of the address-relevant properties has been changed
         if (array_search($modifiedProperty, self::TARGET_NODE_PROPERTIES) === false) {
             return;
         }
