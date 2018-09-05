@@ -40,6 +40,8 @@ class GeocodeConnector
         $targetUrl = $this->getEndpointUrl($targetAddress);
         $request->get($targetUrl);
 
+        \Kint::dump($request);
+
         $data = $request->getResponse();
 
         \Kint::dump($data);
