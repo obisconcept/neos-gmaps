@@ -159,7 +159,7 @@
                 label: '20'
     fitBounds:
       type: boolean
-      defaultValue: false
+      defaultValue: true
       ui:
         label: i18n
         reloadIfChanged: true

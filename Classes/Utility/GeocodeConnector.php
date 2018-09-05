@@ -13,6 +13,8 @@
 
 namespace ObisConcept\NeosGmaps\Utility;
 
+use Neos\Flow\Annotations as Flow;
+
 use Curl\Curl;
 use ObisConcept\NeosGmaps\Exceptions\GeocodeRequestException;
 
@@ -38,13 +40,15 @@ class GeocodeConnector
         $request = new Curl();
 
         $targetUrl = $this->getEndpointUrl($targetAddress);
+
+        \Neos\Flow\var_dump($targetUrl);
+
         $request->get($targetUrl);
 
-        \Kint::dump($request);
+        $response = $request->getRawResponse();
+        $data = json_decode($response, true);
 
-        $data = $request->getResponse();
-
-        \Kint::dump($data);
+        \Neos\Flow\var_dump($data);
 
         die;
     }

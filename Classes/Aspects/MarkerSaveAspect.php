@@ -26,7 +26,7 @@ use ObisConcept\NeosGmaps\Utility\GeocodeConnector;
  * @Flow\Scope("singleton")
  * @Flow\Aspect
  */
-class UnitLoginAspect
+class MarkerSaveAspect
 {
     const TARGET_NODE_TYPE = 'ObisConcept.NeosGmaps:GoogleMapMarker';
 
@@ -62,13 +62,18 @@ class UnitLoginAspect
             return;
         }
 
-        // Collect current address data
+        // Collect current address data...
         $street = $node->getProperty('street');
         $zip = $node->getProperty('zip');
         $city = $node->getProperty('city');
         $country = $node->getProperty('country');
+
+        \Neos\Flow\var_dump([$street,$zip,$city,$country]);
+
         // ... and concatenate it
         $address = "$street, $zip $city, $country";
+
+        \Neos\Flow\var_dump($address);
 
         // Resolve the corresponding geocoordinates from the GoogleMaps API
         $coordinates = $this->geocodeService->encode($address);
