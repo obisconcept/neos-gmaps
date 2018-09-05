@@ -1,8 +1,8 @@
-prototype(TYPO3.Neos:Page) {
+prototype(Neos.Neos:Page) {
 
     head {
 
-        gmapsApiJs = TYPO3.TypoScript:Tag {
+        gmapsApiJs = Neos.Fusion:Tag {
             @position = 'before javascripts'
             tagName = 'script'
             attributes {
@@ -11,28 +11,30 @@ prototype(TYPO3.Neos:Page) {
             }
         }
 
-        gmapsJs = TYPO3.TypoScript:Tag {
+        gmapsJs = Neos.Fusion:Tag {
             @position = 'after javascripts'
             tagName = 'script'
             attributes {
                 id = 'bootstrap-js'
                 type = 'text/javascript'
-                src = TYPO3.TypoScript:ResourceUri {
+                src = Neos.Fusion:ResourceUri {
                     path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/main.min.js'
                 }
             }
+            @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
         }
 
-        gmapsBackendJs = TYPO3.TypoScript:Tag {
+        gmapsBackendJs = Neos.Fusion:Tag {
             @position = 'after javascripts'
             tagName = 'script'
             attributes {
                 type = 'text/javascript'
-                src = TYPO3.TypoScript:ResourceUri {
+                src = Neos.Fusion:ResourceUri {
                     path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/backend.min.js'
                 }
             }
             @if.onlyRenderWhenNotInLiveWorkspace = ${node.context.workspace.name != 'live'}
+            @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
         }
 
     }

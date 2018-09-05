@@ -1,14 +1,14 @@
-TYPO3:
+ObisConcept:
+  includeFrontendAssets: true
+  NeosGmaps:
+    apiKey: ''
+Neos:
   Neos:
-    typoScript:
-      autoInclude:
-        'ObisConcept.NeosGmaps': TRUE
-        
     userInterface:
       translation:
         autoInclude:
-          'ObisConcept.NeosGmaps': ['NodeTypes/*']
-
-ObisConcept:
-  NeosGmaps:
-    apiKey: ''
+          ObisConcept.NeosGmaps:
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        ObisConcept.NeosGmaps: true

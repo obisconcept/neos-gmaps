@@ -1,0 +1,20 @@
+{
+  "name": "obisconcept-neos-gmaps",
+  "description": "A Neos CMS package to add Google Maps as node",
+  "main": [
+    "Resources/Private/Assets/JavaScript/main.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "Configuration",
+    "Resources/Private/Fusion",
+    "Resources/Private/Templates",
+    "Resources/Private/Translations",
+    "composer.json",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "jquery": "1.9.1 - 3"
+  }
+}
