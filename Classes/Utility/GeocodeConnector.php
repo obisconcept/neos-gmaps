@@ -18,7 +18,7 @@ use ObisConcept\NeosGmaps\Exceptions\GeocodeRequestException;
 
 class GeocodeConnector
 {
-    protected const GEOCODE_API_ENDPOINT = 'https://maps.googleapis.com/maps/api/geocode/json?key={KEY}&address={VALUE}';
+    const GEOCODE_API_ENDPOINT = 'https://maps.googleapis.com/maps/api/geocode/json?key={KEY}&address={VALUE}';
 
     /**
      * @Flow\InjectConfiguration("apiKey")

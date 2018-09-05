@@ -28,9 +28,9 @@ use ObisConcept\NeosGmaps\Utility\GeocodeConnector;
  */
 class UnitLoginAspect
 {
-    protected const TARGET_NODE_TYPE = 'ObisConcept.NeosGmaps:GoogleMapMarker';
+    const TARGET_NODE_TYPE = 'ObisConcept.NeosGmaps:GoogleMapMarker';
 
-    protected const TARGET_NODE_PROPERTIES = ['street','zip','city','country'];
+    const TARGET_NODE_PROPERTIES = ['street','zip','city','country'];
 
     /**
      * @Flow\Inject
