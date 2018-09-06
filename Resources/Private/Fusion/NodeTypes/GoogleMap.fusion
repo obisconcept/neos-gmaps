@@ -4,7 +4,7 @@ prototype(ObisConcept.NeosGmaps:GoogleMap) < prototype(Neos.Fusion:Tag) {
 
     attributes {
         class = 'google-map-canvas'
-        data-draggable = ${q(node).property('draggable')}
+        data-draggable = ${q(node).property('draggable') == true ? 1 : 0}
         data-fit-bounds = ${q(node).property('fitBounds') == true ? 1 : 0}
         data-lat = ${q(node).property('lat')}
         data-lng = ${q(node).property('lng')}

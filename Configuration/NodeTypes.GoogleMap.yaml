@@ -25,21 +25,22 @@
       defaultValue: 300
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: properties
       validation:
-        Neos.Neos/Validation/IntegerValidator: null
+        'Neos.Neos/Validation/IntegerValidator': []
     type:
       type: string
       defaultValue: ROADMAP
       ui:
         label: Type
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: properties
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
+            allowEmpty: false
             values:
               ROADMAP:
                 label: i18n
@@ -49,12 +50,14 @@
                 label: i18n
               TERRAIN:
                 label: i18n
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
     draggable:
       type: boolean
       defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: properties
     scrollwheel:
@@ -62,7 +65,7 @@
       defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: properties
     mapTypeControl:
@@ -70,7 +73,7 @@
       defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: properties
     zoomControl:
@@ -78,7 +81,7 @@
       defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: properties
     streetViewControl:
@@ -86,7 +89,7 @@
       defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: properties
     lat:
@@ -94,7 +97,7 @@
       defaultValue: '51.163375'
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: coordinates
     lng:
@@ -102,7 +105,7 @@
       defaultValue: '10.447683'
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: coordinates
     zoom:
@@ -110,7 +113,7 @@
       defaultValue: '5'
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: coordinates
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -157,12 +160,14 @@
                 label: i18n
               20:
                 label: i18n
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
     fitBounds:
       type: boolean
       defaultValue: true
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: coordinates
     tilt:
@@ -170,7 +175,7 @@
       defaultValue: '0'
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: coordinates
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -178,9 +183,11 @@
             allowEmpty: false
             values:
               0:
-                label: '0'
+                label: '0°'
               45:
-                label: '45'
+                label: '45°'
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
 
 'ObisConcept.NeosGmaps:MarkerCollection':
   superTypes:
@@ -223,48 +230,48 @@
       type: string
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: address
       validation:
-        'Neos.Neos/Validation/NotEmptyValidator': true
+        'Neos.Neos/Validation/NotEmptyValidator': []
     zip:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: address
       validation:
-        'Neos.Neos/Validation/NotEmptyValidator': true
+        'Neos.Neos/Validation/NotEmptyValidator': []
     city:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: address
       validation:
-        'Neos.Neos/Validation/NotEmptyValidator': true
+        'Neos.Neos/Validation/NotEmptyValidator': []
     country:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: address
     title:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: info
     text:
       type: string
       ui:
         label: i18n
-        reloadIfChanged: true
+        reloadPageIfChanged: true
         inspector:
           group: info
           editor: Neos.Neos/Inspector/Editors/TextAreaEditor
