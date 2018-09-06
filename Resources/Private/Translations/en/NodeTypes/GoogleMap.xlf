@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file original="" product-name="ObisConcept.NeosGmaps" source-language="en" datatype="plaintext">
-		<body>
+<xliff version="1.2" 
+    xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="ObisConcept.NeosGmaps" source-language="en" datatype="plaintext">
+        <body>
             <trans-unit id="ui.label" xml:space="preserve">
                 <source>Google Map</source>
             </trans-unit>
@@ -56,12 +57,72 @@
             <trans-unit id="properties.zoom" xml:space="preserve">
                 <source>Zoom</source>
             </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.1" xml:space="preserve">
+                <source>1 (World)</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.2" xml:space="preserve">
+                <source>2</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.3" xml:space="preserve">
+                <source>3</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.4" xml:space="preserve">
+                <source>4</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.5" xml:space="preserve">
+                <source>5 (Landmass / Continent)</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.6" xml:space="preserve">
+                <source>6</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.7" xml:space="preserve">
+                <source>7</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.8" xml:space="preserve">
+                <source>8</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.9" xml:space="preserve">
+                <source>9</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.10" xml:space="preserve">
+                <source>10 (City)</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.11" xml:space="preserve">
+                <source>11</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.12" xml:space="preserve">
+                <source>12</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.13" xml:space="preserve">
+                <source>13</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.14" xml:space="preserve">
+                <source>14</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.15" xml:space="preserve">
+                <source>15 (Streets)</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.16" xml:space="preserve">
+                <source>16</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.17" xml:space="preserve">
+                <source>17</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.18" xml:space="preserve">
+                <source>18</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.19" xml:space="preserve">
+                <source>19</source>
+            </trans-unit>
+            <trans-unit id="properties.zoom.selectBoxEditor.values.20" xml:space="preserve">
+                <source>20 (Buildings)</source>
+            </trans-unit>
             <trans-unit id="properties.fitBounds" xml:space="preserve">
                 <source>Fit to markers (ignores options above)</source>
             </trans-unit>
             <trans-unit id="properties.tilt" xml:space="preserve">
                 <source>Tilt</source>
             </trans-unit>
-		</body>
-	</file>
+        </body>
+    </file>
 </xliff>

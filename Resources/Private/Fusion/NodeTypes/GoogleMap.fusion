@@ -1,11 +1,64 @@
-prototype(ObisConcept.NeosGmaps:GoogleMap) < prototype(Neos.Neos:Content) {
+prototype(ObisConcept.NeosGmaps:GoogleMap) < prototype(Neos.Fusion:Tag) {
+    tagName = 'div'
+    content = ''
 
-    templatePath = 'resource://ObisConcept.NeosGmaps/Private/Templates/NodeTypes/GoogleMap.html'
-    
-    markers = ${q(node).children('[instanceof ObisConcept.NeosGmaps:MarkerCollection]').children('[instanceof ObisConcept.NeosGmaps:GoogleMapMarker]').get()}
-    
-    markerCollection = ContentCollection {
-		nodePath = 'markerCollection'
-	}
+    attributes {
+        class = 'google-map-canvas'
+        data-draggable = ${q(node).property('draggable')}
+        data-fit-bounds = ${q(node).property('fitBounds') == true ? 1 : 0}
+        data-lat = ${q(node).property('lat')}
+        data-lng = ${q(node).property('lng')}
+        data-map-id = ${q(node).property('_identifier')}
+        data-map-type-control = ${q(node).property('mapTypeControl') == true ? 1 : 0}
+        data-scrollwheel = ${q(node).property('scrollwheel') == true ? 1 : 0}
+        data-street-view-control = ${q(node).property('streetViewControl') == true ? 1 : 0}
+        data-tilt = ${q(node).property('tilt')}
+        data-type = ${q(node).property('type')}
+        data-zoom = ${q(node).property('zoom')}
+        data-zoom-control = ${q(node).property('zoomControl') == true ? 1 : 0}
+        style = ${'height: ' + q(node).property('height') + 'px;'}
 
+        data-markers = Neos.Fusion:Collection {
+            collection = ${q(node).children('markerCollection').children('[instanceof ObisConcept.NeosGmaps:GoogleMapMarker]').get()}
+            itemName = 'marker'
+            itemRenderer = ObisConcept.NeosGmaps:GoogleMapMarker.JSON
+
+            @process.wrapInArray = ${"{'markers':[" + String.trim(value) + "]}"}
+            @process.trimLastComma = ${String.replace(value, ",]", "]")}
+        }
+    }
+
+    # The following stuff is required for the Neos backend
+
+    rawMarkerNodeCollection = Neos.Fusion:Value {
+        value = ContentCollection {
+            nodePath = 'markerCollection'
+        }
+
+        @if.inBackend = ${node.context.inBackend == true}
+    }
+    @process.addRawMarkerNodeCollection = ${value + this.rawMarkerNodeCollection}
+
+    @process.contentElementWrapping = ContentElementWrapping
+}
+
+prototype(ObisConcept.NeosGmaps:GoogleMapMarker) < prototype(Neos.Fusion:Tag) {
+    tagName = 'div'
+    attributes {
+        class = 'obisconcept-neosgmaps-googlemapmarker'
+    }
+    content = ''
+
+    @process.contentElementWrapping = ContentElementWrapping
+}
+
+prototype(ObisConcept.NeosGmaps:GoogleMapMarker.JSON) < prototype(Neos.Fusion:Value) {
+    marker = ${marker != null ? marker : node}
+
+    value = '{'
+    @process.addLatitude = ${value + "'lat':'" + q(marker).property('lat') + "',"}
+    @process.addLongitude = ${value + "'lng':'" + q(marker).property('lng') + "',"}
+    @process.addTitle = ${value + "'title':'" + q(marker).property('title') + "',"}
+    @process.addText = ${value + "'text':'" + q(marker).property('text') + "'"}
+    @process.finish = ${value + '},'}
 }

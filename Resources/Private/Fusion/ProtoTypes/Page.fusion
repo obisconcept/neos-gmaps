@@ -15,7 +15,7 @@ prototype(Neos.Neos:Page) {
             @position = 'after javascripts'
             tagName = 'script'
             attributes {
-                id = 'bootstrap-js'
+                id = 'neosgmaps-js'
                 type = 'text/javascript'
                 src = Neos.Fusion:ResourceUri {
                     path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/main.min.js'

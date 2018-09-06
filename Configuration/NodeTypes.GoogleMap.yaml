@@ -8,7 +8,7 @@
   ui:
     label: i18n
     icon: 'fa fa-globe'
-    inlineEditable: true
+    inlineEditable: false
     inspector:
       groups:
         properties:
@@ -118,45 +118,45 @@
             allowEmpty: false
             values:
               1:
-                label: '1'
+                label: i18n
               2:
-                label: '2'
+                label: i18n
               3:
-                label: '3'
+                label: i18n
               4:
-                label: '4'
+                label: i18n
               5:
-                label: '5'
+                label: i18n
               6:
-                label: '6'
+                label: i18n
               7:
-                label: '7'
+                label: i18n
               8:
-                label: '8'
+                label: i18n
               9:
-                label: '9'
+                label: i18n
               10:
-                label: '10'
+                label: i18n
               11:
-                label: '11'
+                label: i18n
               12:
-                label: '12'
+                label: i18n
               13:
-                label: '13'
+                label: i18n
               14:
-                label: '14'
+                label: i18n
               15:
-                label: '15'
+                label: i18n
               16:
-                label: '16'
+                label: i18n
               17:
-                label: '17'
+                label: i18n
               18:
-                label: '18'
+                label: i18n
               19:
-                label: '19'
+                label: i18n
               20:
-                label: '20'
+                label: i18n
     fitBounds:
       type: boolean
       defaultValue: true
@@ -209,13 +209,13 @@
   properties:
     lat:
       type: string
-      defaultValue: '40.866667'
+      defaultValue: '51.163375'
       ui:
         inspector:
           group: ~
     lng:
       type: string
-      defaultValue: '34.566667'
+      defaultValue: '10.447683'
       ui:
         inspector:
           group: ~

@@ -4,7 +4,7 @@ if (typeof document.addEventListener === 'function') {
         
         initGoogleMaps();
         
-    });
+    }, false);
     
     document.addEventListener('Neos.NodeCreated', function(event) {
         
@@ -14,6 +14,6 @@ if (typeof document.addEventListener === 'function') {
             
         }
         
-    });
+    }, false);
 
 }
