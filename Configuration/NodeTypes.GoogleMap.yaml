@@ -226,6 +226,8 @@
         reloadIfChanged: true
         inspector:
           group: address
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': true
     zip:
       type: string
       ui:
@@ -233,6 +235,8 @@
         reloadIfChanged: true
         inspector:
           group: address
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': true
     city:
       type: string
       ui:
@@ -240,6 +244,8 @@
         reloadIfChanged: true
         inspector:
           group: address
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': true
     country:
       type: string
       ui:

@@ -32,7 +32,7 @@ class GeocodeConnector
      * Encodes the given target address to geocoordinates.
      *
      * @param string $targetAddress The address to encode
-     * @return array The encoded geocoordinates
+     * @return array The encoded geocoordinates and additional information
      * @throws GeocodeRequestException
      */
     public function encode(string $targetAddress) : array
@@ -41,16 +41,29 @@ class GeocodeConnector
 
         $targetUrl = $this->getEndpointUrl($targetAddress);
 
-        \Neos\Flow\var_dump($targetUrl);
-
         $request->get($targetUrl);
 
         $response = $request->getRawResponse();
         $data = json_decode($response, true);
 
-        \Neos\Flow\var_dump($data);
+        $request->close();
 
-        die;
+        if ($data['status'] !== 'OK') {
+            throw new GeocodeRequestException(
+                "The given address '$targetAddress' could not be resolved to a proper set of geocoordinates!",
+                1536224261,
+                $this->resolveExceptionFromResponse($data)
+            );
+        }
+
+        $geoData = $data['results'][0];
+
+        return [
+            'identifier' => $geoData['place_id'],
+            'address' => $geoData['formatted_address'],
+            'latitude' => $geoData['geometry']['location']['lat'],
+            'longitude' => $geoData['geometry']['location']['lng']
+        ];
     }
 
     public function decode(string $lat, string $lng) : string
@@ -67,5 +80,34 @@ class GeocodeConnector
         $endpoint = str_replace('{VALUE}', urlencode($targetAddress), $endpoint);
 
         return $endpoint;
+    }
+
+    /**
+     * Resolves an exception object from the given response data if possible.
+     *
+     * @param array $data The response data
+     * @return \Exception|null The resolved exception or null if no error occurred
+     */
+    protected function resolveExceptionFromResponse(array $data)
+    {
+        if ($data['status'] === 'ZERO_RESULTS') {
+            $msg = 'The specified address does not exist.';
+        } elseif ($data['status'] === 'OVER_DAILY_LIMIT') {
+            $msg = 'Either the API key is missing, billing is not enabled on your account or the usage-quota has been exceeded!';
+        } elseif ($data['status'] === 'OVER_QUERY_LIMIT') {
+            $msg = 'You are over your quota!';
+        } elseif ($data['status'] === 'REQUEST_DENIED') {
+            $msg = 'Your request has been denied!';
+        } elseif ($data['status'] === 'INVALID_REQUEST') {
+            $msg = 'Your request is missing required arguments! Make sure you pass either an address, components or coordinates.';
+        } elseif ($data['status'] === 'UNKNOWN_ERROR') {
+            $msg = 'An internal server error has occurred! Try again in a few minutes.';
+        }
+
+        if (isset($msg)) {
+            return new \Exception($msg, 1536225215);
+        }
+
+        return null;
     }
 }

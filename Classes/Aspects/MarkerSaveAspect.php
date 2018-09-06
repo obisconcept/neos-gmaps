@@ -41,7 +41,7 @@ class MarkerSaveAspect
     /**
      * Checks if the changed node is a map marker, if so resolve and store geocoded data.
      *
-     * @Flow\Before("method(Neos\ContentRepository\Domain\Model\Node->emitNodePropertyChanged())")
+     * @Flow\After("method(Neos\ContentRepository\Domain\Model\Node->emitNodePropertyChanged())")
      * @param JoinPointInterface $joinPoint The current joinpoint
      * @return void
      */
@@ -62,18 +62,20 @@ class MarkerSaveAspect
             return;
         }
 
-        // Collect current address data...
         $street = $node->getProperty('street');
         $zip = $node->getProperty('zip');
         $city = $node->getProperty('city');
+
+        if (empty($street) || empty($zip) || empty($city)) {
+            return;
+        }
+
+        $address = "$street, $zip $city";
+
         $country = $node->getProperty('country');
-
-        \Neos\Flow\var_dump([$street,$zip,$city,$country]);
-
-        // ... and concatenate it
-        $address = "$street, $zip $city, $country";
-
-        \Neos\Flow\var_dump($address);
+        if (!empty($country)) {
+            $address .= ", $country";
+        }
 
         // Resolve the corresponding geocoordinates from the GoogleMaps API
         $coordinates = $this->geocodeService->encode($address);
