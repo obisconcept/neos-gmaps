@@ -9,6 +9,7 @@ prototype(Neos.Neos:Page) {
                 type = 'text/javascript'
                 src = ${'https://maps.googleapis.com/maps/api/js?key='+Configuration.setting('ObisConcept.NeosGmaps.apiKey')}
             }
+            @if.apiScriptsNotSuppressed = ${!Configuration.setting('ObisConcept.suppressApiScripts')}
         }
 
         gmapsJs = Neos.Fusion:Tag {
