@@ -4,7 +4,7 @@ prototype(ObisConcept.NeosGmaps:GoogleMap) < prototype(Neos.Neos:Content) {
     
     markers = ${q(node).children('[instanceof ObisConcept.NeosGmaps:MarkerCollection]').children('[instanceof ObisConcept.NeosGmaps:GoogleMapMarker]').get()}
     
-    markerCollection = ContentCollection {
+    markerCollection = Neos.Neos:ContentCollection {
 		nodePath = 'markerCollection'
 	}
 
