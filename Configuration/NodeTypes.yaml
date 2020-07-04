@@ -1,4 +1,4 @@
-'Neos.Neos:ContentCollection':
+"Neos.Neos:ContentCollection":
   constraints:
     nodeTypes:
-      'ObisConcept.NeosGmaps:GoogleMapMarker': FALSE
+      "ObisConcept.NeosGmaps:GoogleMapMarker": FALSE

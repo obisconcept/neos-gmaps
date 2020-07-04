@@ -1,24 +1,23 @@
-
-'ObisConcept.NeosGmaps:GoogleMap':
+"ObisConcept.NeosGmaps:GoogleMap":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   childNodes:
     markerCollection:
-      type: 'ObisConcept.NeosGmaps:MarkerCollection'
+      type: "ObisConcept.NeosGmaps:MarkerCollection"
   ui:
     label: i18n
-    icon: 'fa fa-globe'
+    icon: "fa fa-globe"
     inlineEditable: true
     inspector:
       groups:
         properties:
           label: i18n
           position: 10
-          icon: 'fa fa-cog'
+          icon: "fa fa-cog"
         coordinates:
           label: i18n
           position: 10
-          icon: 'fa fa-location-arrow'
+          icon: "fa fa-location-arrow"
   properties:
     height:
       type: integer
@@ -91,7 +90,7 @@
           group: properties
     lat:
       type: string
-      defaultValue: '51.163375'
+      defaultValue: "51.163375"
       ui:
         label: i18n
         reloadIfChanged: true
@@ -99,7 +98,7 @@
           group: coordinates
     lng:
       type: string
-      defaultValue: '10.447683'
+      defaultValue: "10.447683"
       ui:
         label: i18n
         reloadIfChanged: true
@@ -107,7 +106,7 @@
           group: coordinates
     zoom:
       type: string
-      defaultValue: '5'
+      defaultValue: "5"
       ui:
         label: i18n
         reloadIfChanged: true
@@ -118,45 +117,45 @@
             allowEmpty: false
             values:
               1:
-                label: '1'
+                label: "1"
               2:
-                label: '2'
+                label: "2"
               3:
-                label: '3'
+                label: "3"
               4:
-                label: '4'
+                label: "4"
               5:
-                label: '5'
+                label: "5"
               6:
-                label: '6'
+                label: "6"
               7:
-                label: '7'
+                label: "7"
               8:
-                label: '8'
+                label: "8"
               9:
-                label: '9'
+                label: "9"
               10:
-                label: '10'
+                label: "10"
               11:
-                label: '11'
+                label: "11"
               12:
-                label: '12'
+                label: "12"
               13:
-                label: '13'
+                label: "13"
               14:
-                label: '14'
+                label: "14"
               15:
-                label: '15'
+                label: "15"
               16:
-                label: '16'
+                label: "16"
               17:
-                label: '17'
+                label: "17"
               18:
-                label: '18'
+                label: "18"
               19:
-                label: '19'
+                label: "19"
               20:
-                label: '20'
+                label: "20"
     fitBounds:
       type: boolean
       defaultValue: false
@@ -167,7 +166,7 @@
           group: coordinates
     tilt:
       type: string
-      defaultValue: '0'
+      defaultValue: "0"
       ui:
         label: i18n
         reloadIfChanged: true
@@ -178,32 +177,32 @@
             allowEmpty: false
             values:
               0:
-                label: '0'
+                label: "0"
               45:
-                label: '45'
-'ObisConcept.NeosGmaps:MarkerCollection':
+                label: "45"
+"ObisConcept.NeosGmaps:MarkerCollection":
   superTypes:
-    'Neos.Neos:ContentCollection': true
+    "Neos.Neos:ContentCollection": true
   constraints:
     nodeTypes:
-      'ObisConcept.NeosGmaps:GoogleMapMarker': true
-      '*': false
-'ObisConcept.NeosGmaps:GoogleMapMarker':
+      "ObisConcept.NeosGmaps:GoogleMapMarker": true
+      "*": false
+"ObisConcept.NeosGmaps:GoogleMapMarker":
   superTypes:
-    'Neos.Neos:Content': true
+    "Neos.Neos:Content": true
   ui:
     label: i18n
-    icon: 'fa fa-map-marker'
+    icon: "fa fa-map-marker"
     inspector:
       groups:
         address:
           label: i18n
           position: 10
-          icon: 'fa fa-map-marker'
+          icon: "fa fa-map-marker"
         info:
           label: i18n
           position: 20
-          icon: 'fa fa-info'
+          icon: "fa fa-info"
   properties:
     street:
       type: string

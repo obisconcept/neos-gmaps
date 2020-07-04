@@ -1,14 +1,14 @@
 ObisConcept:
   includeFrontendAssets: true
   NeosGmaps:
-    apiKey: ''
+    apiKey: ""
 Neos:
   Neos:
     userInterface:
       translation:
         autoInclude:
           ObisConcept.NeosGmaps:
-            - 'NodeTypes/*'
+            - "NodeTypes/*"
     fusion:
       autoInclude:
         ObisConcept.NeosGmaps: true

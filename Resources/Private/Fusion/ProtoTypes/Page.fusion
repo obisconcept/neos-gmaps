@@ -1,43 +1,39 @@
 prototype(Neos.Neos:Page) {
-
-    head {
-
-        gmapsApiJs = Neos.Fusion:Tag {
-            @position = 'before javascripts'
-            tagName = 'script'
-            attributes {
-                type = 'text/javascript'
-                src = ${'https://maps.googleapis.com/maps/api/js?key='+Configuration.setting('ObisConcept.NeosGmaps.apiKey')}
-            }
-            @if.apiScriptsNotSuppressed = ${!Configuration.setting('ObisConcept.suppressApiScripts')}
-        }
-
-        gmapsJs = Neos.Fusion:Tag {
-            @position = 'after javascripts'
-            tagName = 'script'
-            attributes {
-                id = 'bootstrap-js'
-                type = 'text/javascript'
-                src = Neos.Fusion:ResourceUri {
-                    path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/main.min.js'
-                }
-            }
-            @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
-        }
-
-        gmapsBackendJs = Neos.Fusion:Tag {
-            @position = 'after javascripts'
-            tagName = 'script'
-            attributes {
-                type = 'text/javascript'
-                src = Neos.Fusion:ResourceUri {
-                    path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/backend.min.js'
-                }
-            }
-            @if.onlyRenderWhenNotInLiveWorkspace = ${node.context.workspace.name != 'live'}
-            @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
-        }
-
+  head {
+    gmapsApiJs = Neos.Fusion:Tag {
+      @position = 'before javascripts'
+      tagName = 'script'
+      attributes {
+        type = 'text/javascript'
+        src = ${'https://maps.googleapis.com/maps/api/js?key='+Configuration.setting('ObisConcept.NeosGmaps.apiKey')}
+      }
+      @if.apiScriptsNotSuppressed = ${!Configuration.setting('ObisConcept.suppressApiScripts')}
     }
 
+    gmapsJs = Neos.Fusion:Tag {
+      @position = 'after javascripts'
+      tagName = 'script'
+      attributes {
+        id = 'bootstrap-js'
+        type = 'text/javascript'
+        src = Neos.Fusion:ResourceUri {
+          path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/main.min.js'
+        }
+      }
+      @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
+    }
+
+    gmapsBackendJs = Neos.Fusion:Tag {
+      @position = 'after javascripts'
+      tagName = 'script'
+      attributes {
+        type = 'text/javascript'
+        src = Neos.Fusion:ResourceUri {
+          path = 'resource://ObisConcept.NeosGmaps/Public/JavaScript/backend.min.js'
+        }
+      }
+      @if.onlyRenderWhenNotInLiveWorkspace = ${node.context.workspace.name != 'live'}
+      @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
+    }
+  }
 }

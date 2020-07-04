@@ -1,10 +1,10 @@
 prototype(ObisConcept.NeosGmaps:GoogleMap) < prototype(Neos.Neos:Content) {
 
-    templatePath = 'resource://ObisConcept.NeosGmaps/Private/Templates/NodeTypes/GoogleMap.html'
-    
-    markers = ${q(node).children('[instanceof ObisConcept.NeosGmaps:MarkerCollection]').children('[instanceof ObisConcept.NeosGmaps:GoogleMapMarker]').get()}
-    
-    markerCollection = Neos.Neos:ContentCollection {
+  templatePath = 'resource://ObisConcept.NeosGmaps/Private/Templates/NodeTypes/GoogleMap.html'
+  
+  markers = ${q(node).children('[instanceof ObisConcept.NeosGmaps:MarkerCollection]').children('[instanceof ObisConcept.NeosGmaps:GoogleMapMarker]').get()}
+  
+  markerCollection = Neos.Neos:ContentCollection {
 		nodePath = 'markerCollection'
 	}
 
