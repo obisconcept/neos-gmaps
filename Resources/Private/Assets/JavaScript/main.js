@@ -1,5 +1,3 @@
-$(document).ready(initGoogleMaps);
-
 window.initGoogleMaps = function () {
 
   $('.google-map-canvas').each(function () {
@@ -112,3 +110,5 @@ window.initGoogleMaps = function () {
   });
 
 }
+
+$(document).ready(initGoogleMaps);
